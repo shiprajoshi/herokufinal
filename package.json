@@ -1,7 +1,7 @@
 {
   "name": "codingbox",
   "version": "0.0.1",
-  "codingbox-version": "0.1.0",
+  "codingbox-version": "0.0.1",
   "private": false,
   "description": "Open-Source Full-Stack Solution For React/Redux Isomorphic Applications",
   "main": "index.js",
