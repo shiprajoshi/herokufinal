@@ -1,6 +1,8 @@
 {
   "name": "codingbox",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "codingbox-version": "0.1.0",
+  "private": false,
   "description": "Open-Source Full-Stack Solution For React/Redux Isomorphic Applications",
   "main": "index.js",
   "dependencies": {
@@ -17,11 +19,17 @@
     "gulp": "^3.9.0"
   },
   "scripts": {
+    "start": "gulp",
+    "test": "gulp test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viatsko/codingbox.git"
+    "type": "https",
+    "url": "https://github.com/viatsko/codingbox.git"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=2.0.0"
   },
   "author": "Valerii Iatsko <dwr@codingbox.io>",
   "license": "MIT",
