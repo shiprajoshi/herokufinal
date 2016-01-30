@@ -9,7 +9,11 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-react": "^3.16.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
