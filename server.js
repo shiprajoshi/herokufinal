@@ -1,3 +1,3 @@
 require('babel-register');
 
-require('./server.es6');
+module.exports = require('./server.es6');

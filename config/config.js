@@ -138,7 +138,11 @@ const initGlobalConfig = function initGlobalConfig() {
 
   // Reading .env if we are on development environment
   // Heroku has its own .env, so this is not needed for herokuapp
-  require('dotenv').config();
+  try {
+    require('dotenv').config();
+  } catch (e) {
+    // Ignore
+  }
 
   // Get the default config
   const defaultConfig = require(path.join(process.cwd(), 'config/env/default'));
@@ -149,6 +153,10 @@ const initGlobalConfig = function initGlobalConfig() {
 
   // Merge config files
   let config = _.merge(defaultConfig, environmentConfig);
+
+  // read package.json for CodingBox.IO project information
+  const pkg = require(path.resolve('./package.json'));
+  config.codingbox = pkg;
 
   // Extend the config object with the local-NODE_ENV.js custom/local environment.
   // This will override any settings present in the local configuration.
