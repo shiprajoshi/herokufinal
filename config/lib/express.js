@@ -100,7 +100,7 @@ module.exports.initViewEngine = function initViewEngine(app) {
 
   // Set views path and view engine
   app.set('view engine', 'view.html');
-  app.set('views', './');
+  app.set('views', path.resolve('./server/views'));
 };
 
 /**
@@ -204,6 +204,14 @@ module.exports.initErrorRoutes = function initErrorRoutes(app) {
 
     // Redirect to error page
     res.redirect('/server-error');
+  });
+
+  // Assume 404 since no middleware responded
+  app.use((req, res) => {
+    res.status(404).render('404', {
+      url: req.originalUrl,
+      error: 'Not Found',
+    });
   });
 };
 
