@@ -2,6 +2,7 @@ import React from 'react';
 import Transmit from 'react-transmit';
 
 import Header from '../components/Header';
+import Authentication from '../components/Authentication';
 import SigninForm from '../components/SigninForm';
 
 class Signin extends React.Component {
@@ -10,6 +11,7 @@ class Signin extends React.Component {
       <div>
         <Header />
         <div className="main-container container" style={{ marginTop: '50px' }}>
+          <Authentication />
           <SigninForm />
         </div>
       </div>
