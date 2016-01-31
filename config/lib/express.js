@@ -187,6 +187,10 @@ module.exports.initModulesServerRoutes = function initModulesServerRoutes(app) {
   // config.files.server.routes.forEach((routePath) => {
   //   require(path.resolve(routePath))(app);
   // });
+
+  config.utils.getGlobbedPaths('./server/routes/**/*.js').forEach((routePath) => {
+    require(path.resolve(routePath))(app);
+  });
 };
 
 /**
