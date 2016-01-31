@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import path from 'path';
 import * as ReactRouter from 'react-router';
 import Transmit from 'react-transmit';
@@ -25,6 +26,16 @@ exports.index = function index(req, res) {
 
     Transmit.renderToString(ReactRouter.RouterContext, renderProps)
       .then(({ reactString, reactData }) => {
+        const cssFiles = _.map(res.app.locals.cssFiles,
+         (cssFile) => {
+           if (_.isString(cssFile)) {
+             return `<link rel="stylesheet" href="${cssFile}" />`;
+           }
+
+           return `<link rel="stylesheet" integrity="${cssFile.integrity}"` +
+                  ` href="${cssFile.href}" crossorigin="anonymous" />`;
+         }).join('');
+
         const template = (
 `<!doctype html>
 <html lang="en-us">
@@ -58,6 +69,9 @@ exports.index = function index(req, res) {
 
     <!-- Fav Icon -->
     <link href="${res.app.locals.favicon}" rel="shortcut icon" type="image/x-icon">
+
+    <!-- CSS Files -->
+    ${cssFiles}
   </head>
   <body>
     <div id="react-root">${reactString}</div>

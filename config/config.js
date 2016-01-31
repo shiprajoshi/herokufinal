@@ -115,6 +115,44 @@ const validateSessionSecret = function validateSessionSecret(config, testing) {
 /**
  * Initialize global configuration files
  */
+const initGlobalConfigFiles = function initGlobalConfigFiles(config, assets) {
+  /* eslint-disable */
+  // Appending files
+  config.files = {
+    server: {},
+    client: {}
+  };
+
+  // Setting Globbed model files
+  config.files.server.models = getGlobbedPaths(assets.server.models);
+
+  // Setting Globbed route files
+  config.files.server.routes = getGlobbedPaths(assets.server.routes);
+
+  // Setting Globbed config files
+  config.files.server.configs = getGlobbedPaths(assets.server.config);
+
+  // Setting Globbed socket files
+  config.files.server.sockets = getGlobbedPaths(assets.server.sockets);
+
+  // Setting Globbed policies files
+  config.files.server.policies = getGlobbedPaths(assets.server.policies);
+
+  // Setting Globbed js files
+  config.files.client.js = getGlobbedPaths(assets.client.lib.js, 'public/').concat(getGlobbedPaths(assets.client.js, ['public/']));
+
+  // Setting Globbed css files
+  //config.files.client.css = getGlobbedPaths(assets.client.lib.css, 'public/').concat(getGlobbedPaths(assets.client.css, ['public/']));
+  config.files.client.css = assets.client.lib.css;
+
+  // Setting Globbed test files
+  config.files.client.tests = getGlobbedPaths(assets.client.tests);
+  /* eslint-enable */
+};
+
+/**
+ * Initialize global configuration files
+ */
 const initGlobalConfigFolders = function initGlobalConfigFolders(config) {
   // Appending files
   config.folders = { // eslint-disable-line
@@ -144,6 +182,16 @@ const initGlobalConfig = function initGlobalConfig() {
     // Ignore
   }
 
+  // Get the default assets
+  const defaultAssets = require(path.join(process.cwd(), 'config/assets/default'));
+
+  // Get the current assets
+  const environmentAssets =
+    require(path.join(process.cwd(), 'config/assets/', process.env.NODE_ENV)) || {};
+
+  // Merge assets
+  const assets = _.merge(defaultAssets, environmentAssets);
+
   // Get the default config
   const defaultConfig = require(path.join(process.cwd(), 'config/env/default'));
 
@@ -168,6 +216,9 @@ const initGlobalConfig = function initGlobalConfig() {
         require(path.join(process.cwd(), `config/env/local-${process.env.NODE_ENV}.js`)
       )
     ) || {});
+
+  // Initialize global globbed files
+  initGlobalConfigFiles(config, assets);
 
   // Initialize global globbed folders
   initGlobalConfigFolders(config);
