@@ -1,4 +1,8 @@
 # CodingBox.IO
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/viatsko/codingbox?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/viatsko/codingbox.svg?branch=master)](https://travis-ci.org/viatsko/codingbox)
+[![Dependencies Status](https://david-dm.org/viatsko/codingbox.svg)](https://david-dm.org/viatsko/codingbox)
+
 Open-Source Full-Stack Solution For React/Redux Isomorphic Applications
 
 ## Introduction
