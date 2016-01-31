@@ -1,8 +1,5 @@
 import path from 'path';
-import React from 'react';
-import ReactDOM from 'react-dom/server';
 import * as ReactRouter from 'react-router';
-import * as history from 'history';
 import Transmit from 'react-transmit';
 
 const routesContainer = require(path.resolve('./client/containers/routes'));
