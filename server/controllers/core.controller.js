@@ -5,7 +5,6 @@ import Transmit from 'react-transmit';
 const routesContainer = require(path.resolve('./client/containers/routes'));
 
 exports.index = function index(req, res) {
-  console.log(req);
   const location = req.originalUrl;
 
   const routes = routesContainer;
