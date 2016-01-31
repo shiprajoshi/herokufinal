@@ -9,6 +9,8 @@ Open-Source Full-Stack Solution For React/Redux Isomorphic Applications
 ## Introduction
 I created CodingBox.IO as a boilerplate for quickly creating startup prototypes. It's based on popular [MEAN.JS](http://meanjs.org/) framework but instead of Angular's stack, it uses ReactJS's stack and written completely in ES6.
 
+This boilerplate doesn't include webpack server side, so require(...) assets stuff won't work - I didn't need it for most of the projects. Maybe I'll add these features later.
+
 ## Before You Begin
 Before you begin we recommend you read about the basic building blocks that assemble a CodingBox.IO application:
 
