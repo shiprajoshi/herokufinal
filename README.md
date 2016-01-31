@@ -81,6 +81,12 @@ Your application should run on port 3000 with the *development* environment conf
 That's it! Your application should be running. To proceed with your development, check the other sections in this documentation.
 If you encounter any problems, try the Troubleshooting section.
 
+To run webpack-dev-server for *development* environment, use:
+
+```bash
+$ npm run watch-client
+```
+
 * explore `config/env/development.js` for development environment configuration options
 
 ### Running in Production mode
@@ -88,6 +94,12 @@ To run your application with *production* environment configuration, execute gul
 
 ```bash
 $ gulp prod
+```
+
+To build webpack's bundle for *production* environment, use:
+
+```bash
+$ npm run build-client
 ```
 
 * explore `config/env/production.js` for production environment configuration options
