@@ -4,6 +4,9 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# Webpack
+public/client.js
+
 # Logs
 logs
 *.log
