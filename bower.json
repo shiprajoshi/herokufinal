@@ -1,8 +1,0 @@
-{
-  "name": "codingbox",
-  "description": "Open-Source Full-Stack Solution For React/Redux Isomorphic Applications",
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "~4"
-  }
-}

@@ -7,6 +7,9 @@ Thumbs.db
 # Webpack
 public/client.js
 
+# Bower
+public/lib
+
 # Logs
 logs
 *.log

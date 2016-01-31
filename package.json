@@ -14,7 +14,6 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
     "body-parser": "^1.14.2",
-    "bower": "^1.7.7",
     "chalk": "^1.1.1",
     "compression": "^1.6.1",
     "connect-flash": "^0.1.1",
@@ -68,8 +67,7 @@
     "build-client": "./node_modules/.bin/webpack --colors --display-error-details --config ./webpack/webpack.client.js",
     "watch-client": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.client-watch.js",
     "lint": "eslint -c .eslintrc config server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bower install --config.interactive=false"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "https",
