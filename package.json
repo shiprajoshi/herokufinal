@@ -64,6 +64,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "build-client": "./node_modules/.bin/webpack --colors --display-error-details --config ./webpack/webpack.client.js",
     "watch-client": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.client-watch.js",
     "lint": "eslint -c .eslintrc config server",
     "test": "echo \"Error: no test specified\" && exit 1"
