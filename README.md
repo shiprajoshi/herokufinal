@@ -2,6 +2,8 @@
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/viatsko/codingbox?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/viatsko/codingbox.svg?branch=master)](https://travis-ci.org/viatsko/codingbox)
 [![Dependencies Status](https://david-dm.org/viatsko/codingbox.svg)](https://david-dm.org/viatsko/codingbox)
+[![Dependency Status](https://david-dm.org/viatsko/codingbox.svg?style=flat-square)](https://david-dm.org/viatsko/codingbox)
+[![devDependency Status](https://david-dm.org/viatsko/codingbox/dev-status.svg?style=flat-square)](https://david-dm.org/viatsko/codingbox#info=devDependencies)
 
 Open-Source Full-Stack Solution For React/Redux Isomorphic Applications
 
