@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.1",
+    "babel-preset-react-hmre": "^1.0.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^4.0.0",
     "eslint-plugin-react": "^3.16.1",
@@ -63,7 +64,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "webpack": "./node_modules/.bin/webpack -w",
+    "watch-client": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.client-watch.js",
     "lint": "eslint -c .eslintrc config server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

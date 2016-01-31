@@ -5,6 +5,8 @@ import Transmit from 'react-transmit';
 const routesContainer = require(path.resolve('./client/containers/routes'));
 
 exports.index = function index(req, res) {
+  const webserver = process.env.NODE_ENV === 'production' ? '' : `//${req.hostname}:8080`;
+
   const location = req.originalUrl;
 
   const routes = routesContainer;
@@ -66,7 +68,7 @@ exports.index = function index(req, res) {
 </html>`
         );
 
-        res.send(Transmit.injectIntoMarkup(template, reactData, [`/client.js`]));
+        res.send(Transmit.injectIntoMarkup(template, reactData, [`${webserver}/client.js`]));
       });
   });
 };

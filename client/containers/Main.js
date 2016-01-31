@@ -18,7 +18,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <p onClick={this.incClicks}>test {this.state.clicks}</p>
+      <p onClick={this.incClicks}>test 22 {this.state.clicks}</p>
     );
   }
 }
