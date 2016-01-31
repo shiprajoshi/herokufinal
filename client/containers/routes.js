@@ -2,6 +2,8 @@ import React from 'react';
 import { Router, Route } from 'react-router';
 
 import Main from './Main';
+import Signin from './Signin';
+import Signup from './Signup';
 import ErrorNotFound from './ErrorNotFound';
 
 /**
@@ -10,6 +12,8 @@ import ErrorNotFound from './ErrorNotFound';
 module.exports = (
 	<Router>
 		<Route path="/" component={Main} />
+		<Route path="/signin" component={Signin} />
+		<Route path="/signup" component={Signup} />
 		<Route path="*" component={ErrorNotFound} />
 	</Router>
 );

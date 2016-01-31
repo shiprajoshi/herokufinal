@@ -3,13 +3,13 @@ import Transmit from 'react-transmit';
 
 import Header from '../components/Header';
 
-class Main extends React.Component {
+class Signup extends React.Component {
   render() {
     return (
       <div>
         <Header />
         <div className="main-container container" style={{ marginTop: '50px' }}>
-          <p>Main</p>
+          <p>Signup</p>
         </div>
       </div>
     );
@@ -19,7 +19,7 @@ class Main extends React.Component {
 /**
  * Use Transmit to query and return GitHub stargazers as a Promise.
  */
-export default Transmit.createContainer(Main, {
+export default Transmit.createContainer(Signup, {
   initialVariables: {
   },
   fragments: {
