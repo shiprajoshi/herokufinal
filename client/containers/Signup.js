@@ -2,6 +2,8 @@ import React from 'react';
 import Transmit from 'react-transmit';
 
 import Header from '../components/Header';
+import Authentication from '../components/Authentication';
+import SignupForm from '../components/SignupForm';
 
 class Signup extends React.Component {
   render() {
@@ -9,7 +11,8 @@ class Signup extends React.Component {
       <div>
         <Header />
         <div className="main-container container" style={{ marginTop: '50px' }}>
-          <p>Signup</p>
+          <Authentication />
+          <SignupForm />
         </div>
       </div>
     );
