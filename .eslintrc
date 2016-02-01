@@ -6,9 +6,6 @@
     "classes": true,
     "generators": true
   },
-  "rules": {
-    "prop-types": [1]
-  },
   "globals": {
     "__SERVER__": true,
     "__DEVELOPMENT__": true,
