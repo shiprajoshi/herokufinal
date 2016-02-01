@@ -2,5 +2,8 @@
   "extends": "airbnb",
   "ecmaFeatures": {
     "experimentalObjectRestSpread": true
+  },
+  "globals": {
+    "__SERVER__": true
   }
 }

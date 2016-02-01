@@ -5,6 +5,8 @@ import Transmit from 'react-transmit';
 
 const routesContainer = require(path.resolve('./client/containers/routes'));
 
+global.__SERVER__ = true;
+
 exports.index = function index(req, res) {
   const webserver = process.env.NODE_ENV === 'production' ? '' : `//${req.hostname}:8080`;
 
