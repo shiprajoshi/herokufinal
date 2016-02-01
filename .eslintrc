@@ -1,8 +1,13 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
   "ecmaFeatures": {
     "experimentalObjectRestSpread": true,
-    "classes": true
+    "classes": true,
+    "generators": true
+  },
+  "rules": {
+    "prop-types": [1]
   },
   "globals": {
     "__SERVER__": true,
