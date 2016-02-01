@@ -70,7 +70,7 @@ This command does a few things:
 * Finally, when the install process is over, npm will initiate a bower install command to install all the front-end modules needed for the application
 
 ## Running Your Application
-After the install process is over, you'll be able to run your application using Gulp, just run grunt default task:
+After the install process is over, you'll be able to run your application using Gulp, just run gulp default task:
 
 ```
 $ gulp
@@ -130,5 +130,5 @@ $ sh ./scripts/generate-ssl-certs.sh
 Windows users can follow instructions found [here](http://www.websense.com/support/article/kbarticle/How-to-use-OpenSSL-and-Microsoft-Certification-Authority).
 After you've generated the key and certificate, place them in the *config/sslcerts* folder.
 
-Finally, execute grunt's prod task `gulp prod`
+Finally, execute gulp's prod task `gulp prod`
 * enable/disable SSL mode in production environment change the `secure` option in `config/env/production.js`
