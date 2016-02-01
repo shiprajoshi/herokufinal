@@ -51,6 +51,7 @@
     "serve-favicon": "^2.3.0",
     "socket.io": "^1.4.5",
     "swig": "^1.4.2",
+    "validator": "^4.5.2",
     "webpack": "^1.12.12"
   },
   "devDependencies": {
