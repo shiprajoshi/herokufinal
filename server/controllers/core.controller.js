@@ -55,11 +55,15 @@ exports.index = function index(req, res) {
     <!-- Facebook META -->
     <meta property="fb:app_id" content="${res.app.locals.facebookAppId}">
     <meta property="og:site_name" content="${res.app.locals.title}">
+    <meta property="og:locale" content="en_US">
     <meta property="og:title" content="${res.app.locals.title}">
     <meta property="og:description" content="${res.app.locals.description}">
     <meta property="og:url" content="${res.locals.url}">
     <meta property="og:image" content="${res.app.locals.logo}">
+    <meta property="og:card" content="summary">
     <meta property="og:type" content="website">
+    <meta property="og:site" content="@viatsko">
+    <meta property="og:creator" content="@viatsko">
 
     <!-- Twitter META -->
     <meta name="twitter:title" content="${res.app.locals.title}">
